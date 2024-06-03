@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"> 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CircuitoMunicipalSurf2024</title>
+
+        <link rel="stylesheet" th:href="@{/css/style.css}" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    </head>
+    <body>
+
+            <section class="container-fluid text-center">
+        <div>
+            <header class="container-fluid p-2 text-center" id="home">
+                <nav class="navbar navbar-expand-lg bg-light">
+                    <div class="container-fluid">
+                        <img src="./images/4.png" width="450" alt="Logo">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a th:href="@{/}" class="nav-link mx-2"><h5>Principal</h5></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a th:href="@{/galeria}" class="nav-link mx-2"><h5>Galeria</h5></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a th:href="@{/criarInscricaoForm}" class="nav-link mx-2"><h5>Inscrições</h5></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a th:href="@{/listaInscricoes}" class="nav-link mx-2"><h5>Inscritos</h5></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+        </div>
+    </section>
+
+        <section class="container-fluid" id="home">
+
+            <div id="carouselExampleIndicators" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./images/Bg03.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./images/Bg02.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./images/Bg05.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./images/Bg04.png" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+        </section>
+
+                <section>
+                    
+                    <style>
+                        
+                        form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+
+                    </style>                
+                    
+                    <div class="container"> 
+                        <h1>Inscrição de Atletas</h1> 
+                     <hr>
+            <div class="text-center"> 
+                        <h4>Ficha de Inscrição</h4>
+                <img th:src="@{/images/icone.jpg}" height="70px">
+                <br> 
+            </div>
+                        
+            <form action="#" th:action="@{/salvarInscricao}" th:object="${inscricao}" method="POST">
+
+                                <input type="text" th:field="*{nome}" placeholder="Insira o Nome" class="form-control mt-4 col-4"> 
+                                <span class="text-danger" th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}"></span>
+
+                                <input type="email" th:field="*{email}" placeholder="Insira o Email" class="form-control mt-4 col-4"> 
+                                <span class="text-danger" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span> 
+
+                                <input type="text" th:field="*{telefone}" placeholder="Insira o Telefone" class="form-control mt-4 col-4"> 
+                                <span class="text-danger" th:if="${#fields.hasErrors('telefone')}" th:errors="*{telefone}"></span> 
+
+                                <input type="date" th:field="*{dataNascimento}" placeholder="Data de Nascimento" class="form-control mt-4 col-4"> 
+                                <span class="text-danger" th:if="${#fields.hasErrors('dataNascimento')}" th:errors="*{dataNascimento}"></span> 
+
+                                <input type="text" th:field="*{sexo}" placeholder="Insira o Sexo" class="form-control mt-4 col-4"> 
+                                <span class="text-danger" th:if="${#fields.hasErrors('sexo')}" th:errors="*{sexo}"></span> 
+
+                                <input type="text" th:field="*{cidade}" placeholder="Insira a Cidade" class="form-control mt-4 col-4"> 
+                                <span class="text-danger" th:if="${#fields.hasErrors('cidade')}" th:errors="*{cidade}"></span>
+
+                                <input type="text" th:field="*{categoria}" placeholder="Insira a Categoria" class="form-control mt-4 col-4"> 
+                                <span class="text-danger" th:if="${#fields.hasErrors('categoria')}" th:errors="*{categoria}"></span>           
+
+                                <button type="submit" class="btn btn-info mt-4"> Salvar</button> 
+
+                            </form> 
+                        <hr> 
+                        <div class="text-center">
+                            <a th:href="@{/}" >Retornar</a> 
+            </div>
+                    </div> 
+                    
+                </section>
+
+    <section class="container-fluid">
+
+        <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./images/5.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/1.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/6.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/7.png" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+    </section>
+
+
+    <section class="bg-secondary-subtle text-center text-light p-3">
+        <footer class="row m-3 p-3 p-2 justify-content-center">
+
+            <address class="col-sm-4 col-md-4 col-lg-4">
+                <div class="card card-sm">
+                    <div class="card-header text-bg-dark text-center">
+                        <b>Endereço</b>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Trailer Parada do Surf</li>
+                        <li class="list-group-item">Av. Beira Mar, 20.000</li>
+                        <li class="list-group-item">Balneario Aragarças</li>
+
+                    </ul>
+                </div>
+            </address>
+
+            <address class="col-sm-4 col-md-4 col-lg-4 text-light">
+                <div class="card card-sm">
+                    <div class="card-header text-bg-dark text-center">
+                        <b>Contatos:</b>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">(13) 99770-0927</li>
+                        <li class="list-group-item">(13) 98134-4815</li>
+                        <li class="list-group-item">(13) xxxxx-xxxx</li>
+                    </ul>
+                </div>
+            </address>
+
+            <address class="col-sm-4 col-md-4 col-lg-4 text-light">
+                <div class="card card-sm">
+                    <div class="card-header text-bg-dark text-center">
+                        <b>Redes Sociais</b>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><i class="bi bi-facebook"></i> Facebook</li>
+                        <li class="list-group-item"><i class="bi bi-instagram "></i> Instagram</li>
+                        <li class="list-group-item"><i class="bi bi-youtube "></i> YouTube</li>
+                    </ul>
+                </div>
+            </address>
+
+        </footer>
+
+    </section>
+
+    <div class="container-fluid text-center">
+        <footer class="d-flex flex-wrap justify-content-center align-items-center py-3 my-4 border-top">
+            <div class="col-md-4 d-flex align-items-center">
+                <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+                    <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
+                </a>
+                <span class="mb-3 mb-md-0 text-body-secondary"><b>&copy;Design by Carlos Alexandre - 2024, Inc<br> Contato: (13) 98134-4815</b></b></span>
+            </div>
+        </footer>
+    </div>
+
+        <script type="text/javascript" src="./js/script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+     
+</body>
+</html>

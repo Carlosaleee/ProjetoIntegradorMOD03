@@ -1,0 +1,543 @@
+<!DOCTYPE html> 
+<html lang="pt" xmlns:th="http://www.thymeleaf.org"> 
+         <head> 
+        <meta charset="utf-8"> 
+        <title>Circuito Municipal Ilha Compridense - 2024 </title>
+                
+        <link rel="stylesheet" th:href="@{/css/style.css}" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous"> 
+        </head>  
+        
+       <body>
+    <section class="container-fluid text-center">
+        <div>
+            <header class="container-fluid p-2 text-center" id="home">
+                <nav class="navbar navbar-expand-lg bg-light">
+                    <div class="container-fluid">
+                        <img src="./images/4.png" width="450" alt="Logo">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a th:href="@{/}" class="nav-link mx-2"><h5>Principal</h5></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a th:href="@{/galeria}" class="nav-link mx-2"><h5>Galeria</h5></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a th:href="@{/criarInscricaoForm}" class="nav-link mx-2"><h5>Inscrições</h5></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a th:href="@{/listaInscricoes}" class="nav-link mx-2"><h5>Inscritos</h5></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+        </div>
+    </section>
+    
+    <section class="container-fluid" id="home">
+
+            <div id="carouselExampleIndicators" class="carousel slide">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="./img/Bg03.png" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./images/Bg02.png" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./images/Bg05.png" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./images/Bg04.png" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+
+
+        </section>
+
+    <section>
+        <div class="container-fluid">
+          <img src="./images/1.png" class="d-block w-100" alt="...">
+        </div>
+
+    </section>
+    
+    
+    <section class="container-fluid row m-3 justify-content-center" id="legenda">
+
+      <div class="col-md-4 text-center bg-warning-subtle text-center p-2">
+          
+          <div class="row">
+               <video width="620" height="440" controls>
+        <source src="./images/Mp4/FolderMp4.mp4" type="video/mp4">
+        Seu navegador não suporta o elemento de vídeo.
+    </video>
+          </div>
+      </div>
+  
+      <div class="col-md-8 container-fluid bg-warning-subtle text-center p-2">
+          <br>
+          <h2><b>➡️ Prepare-se para Duas Etapas:</b></h2><hr>
+          <br>
+          <h4>Praia das Garças e Boqueirão Norte!</h4>
+          <br>
+          <h5>Prestigie os Melhores Surfistas da Região Competindo nas Categorias:</h5><br>
+          <h5><b>- Open Masculino</b></h5>
+          <h5><b>- Open Feminino</b></h5>
+          <h5><b>- Sub16</b></h5>
+          <h5><b>- Longboard</b></h5>
+          <h5><b>- Master</b></h5>
+          <br>
+          <h5>➡️ Não fique de fora Dessa!</h5>
+      </div>
+  
+  </section>
+
+    <section class=" container-fluid bg-warning  text-center p-2 "id="Categorias"> 
+
+        <h2><b>Categorias</b></h2>
+        <p><b></b>Valores de Inscrição</b></p>
+        <table class="table table-warning table-striped table-hover table-bordered border-dark">
+           
+            
+            <thead class="table-dark">
+            <tr>
+                <th>
+                   Categorias
+                </th>
+                <th>
+                    Valor
+                </th>
+            </tr>
+        </thead>
+
+        <tbody class="table-group-divider">
+            <tr>
+                <td>
+                  Open Masculino
+                </td>
+                <td>
+                    R$ 80,00
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                  Master
+                </td>
+                <td>
+                    R$ 60,00
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                  Longboard
+                </td>
+                <td>
+                    R$ 60,00
+                </td>
+            </tr>
+
+            <tr>
+              <td>
+                Open Feminino
+              </td>
+              <td>
+                  Inscrição Solidaria 
+              </td>
+          </tr>
+
+            <tr>
+                <td>
+                    Sub16
+                </td>
+                <td>
+                    Inscrição Solidaria
+                </td>
+            </tr>
+
+        </tbody>
+
+        </table>
+       
+    </section>
+
+  </section>
+
+    <section class="container-fluid bg-light text-center p-3">
+      
+      <div class="card text-center ">
+        <div class="card-header  bg-danger-subtle text-danger">
+          <b>Inscrições Abertas</b>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title"> <b>Inscrições Abertas</b></h3>
+          <p class="card-text"></p>
+          <a th:href="@{/criarInscricaoForm}" class="btn btn-outline-danger text-center p-3"> Inscrições</a><br>
+        </div>
+        <div class="card-footer text- bg-danger-subtle text-danger">
+          <b>Inscrições Limitadas</b>
+        </div>
+      </div>
+
+    </section>
+
+    <style>
+       
+        .border-dark {
+            border-color: #343a40 !important; /* Cor mais escura para as bordas */
+        }
+    </style>
+
+              <section class=" container-fluid bg-warning  text-center p-2 "id="Categorias">
+      
+       <center>
+             
+        <h2><b>Atletas Inscritos</b></h2>
+                     
+            </center>
+                        <table class="table table-warning table-striped table-hover table-bordered border-dark table-responsive-md">                
+                                <thead class="table-dark"> 
+                                        <tr> 
+                                                <th>ID 
+                                                    <th>Nome 
+                                                    <th>Email
+                                                    <th>Telefone 
+                                                    <th>Data de Nascimento 
+                                                    <th>Sexo 
+                                                    <th>Cidade
+                                                    <th>Categoria
+                                                </tr> 
+                                    <thead class="table-dark">
+                                <tbody class="table-group-divider">
+                                        <tr th:each="inscricao : ${listarInscricao}"> 
+                                                <td th:text="${inscricao.id}"> 
+                                                    <td th:text="${inscricao.nome}"> 
+                                                    <td th:text="${inscricao.email}">  
+                                                    <td th:text="${inscricao.telefone}"> 
+                                                    <td th:text="${inscricao.dataNascimento}">
+                                                    <td th:text="${inscricao.sexo}">
+                                                    <td th:text="${inscricao.cidade}">
+                                                    <td th:text="${inscricao.categoria}"> 
+                                                    <td>
+                            <div style="display: flex;">
+                                <a th:href="@{/atualizarInscricaoForm/{id}(id=${inscricao.id})}" class="btn btn-primary" style="margin-right: 10px;">Atualizar</a>
+                                <a th:href="@{/deletarInscricao/{id}(id=${inscricao.id})}" class="btn btn-danger">Excluir</a>
+                            </div>
+                        </td>
+                                            </tr> 
+                                    </tbody> 
+                            </table>  
+                    
+  </section>
+
+          <section>
+            <div class="container-fluid">
+              <img src="./images/BannerAtletas.png" class="d-block w-100" alt="...">
+            </div>
+        
+        </section>
+
+          <section class="container-fluid" id="atletas">
+
+            <style>
+                /* Ajusta o tamanho das imagens */
+                .carousel-item img {
+                    max-width: 100%;
+                    height: auto;
+                    padding: 3%;
+                      
+                }
+            </style>
+          
+          <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col">
+                                <img src="./images/atletas/CesarFolder.png" class="d-block w-100" alt="Slide 1">
+                            </div>
+                            <div class="col">
+                                <img src="./images/atletas/DaniloFolder.png" class="d-block w-100" alt="Slide 2">
+                            </div>
+                            <div class="col">
+                                <img src="./images/atletas/EDMARFOLDER.png" class="d-block w-100" alt="Slide 3">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Repita esses três itens mais 5 vezes -->
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col">
+                                <img src="./images/atletas/elielFolder.png" class="d-block w-100" alt="Slide 4">
+                            </div>
+                            <div class="col">
+                                <img src="./images/atletas/GilmarFolder.png" class="d-block w-100" alt="Slide 5">
+                            </div>
+                            <div class="col">
+                                <img src="./images/atletas/ivanFolder.png" class="d-block w-100" alt="Slide 6">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ... -->
+                    <!-- Repita esses três itens mais 5 vezes -->
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col">
+                                <img src="./images/atletas/JorgeFolder.png" class="d-block w-100" alt="Slide 4">
+                            </div>
+                            <div class="col">
+                                <img src="./images/atletas/LeoTattooFolder.png" class="d-block w-100" alt="Slide 5">
+                            </div>
+                            <div class="col">
+                                <img src="./images/atletas/lukasFolder.png" class="d-block w-100" alt="Slide 6">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ... -->
+                    <!-- Repita esses três itens mais 5 vezes -->
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col">
+                                <img src="./images/atletas/MarcosFolder1.png" class="d-block w-100" alt="Slide 4">
+                            </div>
+                            <div class="col">
+                                <img src="./images/atletas/MarcusFolder2.png" class="d-block w-100" alt="Slide 5">
+                            </div>
+                            <div class="col">
+                                <img src="./images/atletas/MarlonFolder.png" class="d-block w-100" alt="Slide 6">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ... -->
+                    <!-- Repita esses três itens mais 5 vezes -->
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col">
+                                <img src="./images/atletas/MatheusFolder.png" class="d-block w-100" alt="Slide 4">
+                            </div>
+                            <div class="col">
+                                <img src="./images/atletas/RafaFolder.png" class="d-block w-100" alt="Slide 5">
+                            </div>
+                            <div class="col">
+                                <img src="./images/atletas/ValdecirFolder.png" class="d-block w-100" alt="Slide 6">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ... -->
+                    <!-- Repita esses três itens mais 5 vezes -->
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col">
+                                <img src="./images/atletas/victorDattiFolder.png" class="d-block w-100" alt="Slide 4">
+                            </div>
+                            <div class="col">
+                                <img src="./images/atletas/viniciusFolder.png" class="d-block w-100" alt="Slide 5">
+                            </div>
+                            <div class="col">
+                                <img src="./images/atletas/WilliansFolder.png" class="d-block w-100" alt="Slide 6">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ... --><!-- Repita esses três itens mais 5 vezes -->
+                    <div class="carousel-item">
+                      <div class="row">
+                          <div class="col">
+                              <img src="./images/atletas/AlyFolder.png" class="d-block w-100" alt="Slide 4">
+                          </div>
+                          <div class="col">
+                              <img src="./images/atletas/PatricFolder.png" class="d-block w-100" alt="Slide 5">
+                          </div>
+                          <div class="col">
+                            <img src="./images/atletas/othavioFolder.png" class="d-block w-100" alt="Slide 5">
+                        </div>
+                      </div>
+                  </div>
+                  <!-- ... -->
+                    <!-- Repita esses três itens mais 5 vezes -->
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col">
+                                <img src="./images/atletas/WillimMartinsFolder.png" class="d-block w-100" alt="Slide 4">
+                            </div>
+                            <div class="col">
+                                <img src="./images/atletas/GilmarFolder.png" class="d-block w-100" alt="Slide 5">
+                            </div>
+                            <div class="col">
+                                <img src="./images/atletas/ivanFolder.png" class="d-block w-100" alt="Slide 6">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Repita esses três itens mais 5 vezes -->
+                    <div class="carousel-item">
+                      <div class="row">
+                          <div class="col">
+                              <img src="./images/atletas/DiegoFolder.png" class="d-block w-100" alt="Slide 4">
+                          </div>
+                          <div class="col">
+                              <img src="./images/atletas/vitor2Folder.png" class="d-block w-100" alt="Slide 5">
+                          </div>
+                          <div class="col">
+                              <img src="./images/atletas/fernandoFolder.png" class="d-block w-100" alt="Slide 6">
+                          </div>
+                      </div>
+                  </div>
+                    <!-- ... -->
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+      </section>
+
+          <section>
+            <div class=" text-center bg-warning text-center p-2">
+              <h3 class="bg-warming"><b>Como Chegar: </b></h3><br>
+             </div>
+          </section>
+          
+          
+          <section class="container-fluid row m-3 justify-content-center" id="legenda">
+
+            <div class="col-md-6 text-center bg-warning-subtle p-3">
+                <div class="row justify-content-center">
+                  <video width="620" height="440" controls>
+                        <source src="./images/Mp4/localizacaoMp4.mp4" type="video/mp4">
+                        Seu navegador não suporta o elemento de vídeo.
+                    </video>
+                </div>
+            </div>
+        
+            <div class="col-md-6 bg-warning-subtle p-2">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3622.1283207049405!2d-47.61856832485025!3d-24.791059177974653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94da97a88367e4a7%3A0x71071c85d3529805!2sparada%20do%20surf!5e0!3m2!1spt-BR!2sbr!4v1713742645097!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        
+        </section>
+        
+        <section class="container-fluid">
+
+          <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./images/5.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./images/1.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./images/6.png" class="d-block w-100" alt="...">
+              </div>
+                <div class="carousel-item">
+                <img src="./images/7.png" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+        </section>
+
+        
+        <section class="bg-secondary-subtle text-center text-light p-3">
+          <footer class="row m-3 p-3 p-2 justify-content-center">
+        
+            <address class="col-sm-4 col-md-4 col-lg-4">
+              <div class="card card-sm">
+                <div class="card-header text-bg-dark text-center">
+                  <b>Endereço</b>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Trailer Parada do Surf</li>
+                  <li class="list-group-item">Av. Beira Mar, 20.000</li>
+                  <li class="list-group-item">Balneario Aragarças</li>
+                  
+                </ul>
+              </div>
+            </address>
+        
+            <address class="col-sm-4 col-md-4 col-lg-4 text-light">
+              <div class="card card-sm">
+                <div class="card-header text-bg-dark text-center">
+                <b>Contatos:</b>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">(13) 99770-0927</li>
+                  <li class="list-group-item">(13) 98134-4815</li>
+                  <li class="list-group-item">(13) xxxxx-xxxx</li>
+                </ul>
+              </div>
+            </address>
+        
+            <address class="col-sm-4 col-md-4 col-lg-4 text-light">
+              <div class="card card-sm">
+                <div class="card-header text-bg-dark text-center">
+                  <b>Redes Sociais</b>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item"><i class="bi bi-facebook"></i> Facebook</li>
+                  <li class="list-group-item"><i class="bi bi-instagram "></i> Instagram</li>
+                  <li class="list-group-item"><i class="bi bi-youtube "></i> YouTube</li>
+                </ul>
+              </div>
+            </address>
+        
+          </footer>
+          
+        
+        </section>
+        
+        <div class="container-fluid text-center">
+          <footer class="d-flex flex-wrap justify-content-center align-items-center py-3 my-4 border-top">
+              <div class="col-md-4 d-flex align-items-center">
+                  <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+                      <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
+                  </a>
+                  <span class="mb-3 mb-md-0 text-body-secondary"><b>&copy;Design by Carlos Alexandre - 2024, Inc<br> Contato: (13) 98134-4815</b></b></span>
+              </div>
+          </footer>
+      </div>
+      
+        
+            
+          </footer>
+        </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>  
+</html>
